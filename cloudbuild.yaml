@@ -3,12 +3,12 @@ steps:
   args: 
   - 'build' 
   - '-t' 
-  - 'gcr.io/$PROJECT_ID/pinning-test-gcr' 
+  - 'gcr.io/$PROJECT_ID/nodejs-base' 
   - '--label' 
   - 'org.opencontainers.image.revision=$COMMIT_SHA' 
   - '--label' 
-  - 'org.opencontainers.image.source=docker/Dockerfile' 
+  - 'org.opencontainers.image.source=Dockerfile' 
   - '-f' 
-  - 'docker/Dockerfile' 
+  - 'Dockerfile' 
   - '.'
-images: ['gcr.io/$PROJECT_ID/pinning-test-gcr']
+images: ['gcr.io/$PROJECT_ID/nodejs-base']
