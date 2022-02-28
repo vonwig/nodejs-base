@@ -1,4 +1,4 @@
-FROM debian:stretch-slim
+FROM debian:stretch-slim@sha256:d87734c97bfd3681c64137af7754d03865c2d013eb05d42f81aa52a6516fc12b
 
 # Install mongo server and clients
 RUN apt-get update && apt-get install -y \
