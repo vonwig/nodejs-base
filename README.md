@@ -7,3 +7,4 @@ Base image for our Node.JS web-applications.
 ```Dockerfile
 FROM gcr.io/personalsdm-216019/nodejs-base:16-stretch
 ```
+
