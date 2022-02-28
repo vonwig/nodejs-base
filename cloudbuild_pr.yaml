@@ -3,10 +3,10 @@ steps:
   args: 
   - 'build' 
   - '-t' 
-  - 'gcr.io/$PROJECT_ID/nodejs-base:16-stretch_pr$_PR_NUMBER' 
+  - 'gcr.io/$PROJECT_ID/nodejs-base:16-stretch_pr$SHORT_SHA' 
   - '--build-arg' 
   - 'COMMIT_SHA=$COMMIT_SHA' 
   - '-f' 
   - 'Dockerfile' 
   - '.'
-images: ['gcr.io/$PROJECT_ID/nodejs-base:16-stretch_pr$_PR_NUMBER']
+images: ['gcr.io/$PROJECT_ID/nodejs-base:16-stretch_pr$SHORT_SHA']
