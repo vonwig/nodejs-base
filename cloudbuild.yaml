@@ -1,0 +1,12 @@
+steps:
+ - name: 'gcr.io/cloud-builders/docker'
+   args: 
+   - 'build' 
+   - '-t' 
+   - 'gcr.io/$PROJECT_ID/nodejs-base:16-stretch' 
+   - '--build-arg' 
+   - 'COMMIT_SHA=$COMMIT_SHA' 
+   - '-f' 
+   - 'Dockerfile' 
+   - '.'
+ images: ['gcr.io/$PROJECT_ID/nodejs-base:16-stretch']
