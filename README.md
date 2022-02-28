@@ -5,5 +5,5 @@ Base image for our Node.JS web-applications.
 ## Usage
 
 ```Dockerfile
-FROM atomist/nodejs-base:16-stretch
+FROM gcr.io/personalsdm-216019/nodejs-base:16-stretch
 ```
