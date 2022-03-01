@@ -19,3 +19,6 @@ ARG DOCKERFILE_PATH=Dockerfile
 
 LABEL org.opencontainers.image.revision=$COMMIT_SHA \
   org.opencontainers.image.source=$DOCKERFILE_PATH
+# atomist-start: fix for https://dso.atomist.com/cve/ATM-2022-0001
+RUN apk add --no-cache  busybox=1.33.1-r6
+# atomist-end
