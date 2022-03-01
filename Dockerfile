@@ -23,3 +23,7 @@ LABEL org.opencontainers.image.revision=$COMMIT_SHA \
 # atomist-start: fix for https://dso.atomist.com/cve/ATM-2022-0002
 RUN apk add --no-cache  openssl=1.1.1l-r0
 # atomist-end
+
+# atomist-start: fix for https://dso.atomist.com/cve/ATM-2022-0002
+RUN apk add --no-cache  busybox=1.33.1-r6
+# atomist-end
