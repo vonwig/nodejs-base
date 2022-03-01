@@ -1,21 +1,8 @@
-FROM debian:stretch-slim@sha256:d87734c97bfd3681c64137af7754d03865c2d013eb05d42f81aa52a6516fc12b
-
-# Install mongo server and clients
-RUN apt-get update && apt-get install -y \
-  mongodb=1:3.2.11-2+deb9u1 \
- && apt-get clean -y \
- && rm -rf /var/cache/apt /var/lib/apt/lists/* /tmp/* /var/tmp/*
+FROM alpine:3.14@sha256:eb3e4e175ba6d212ba1d6e04fc0782916c08e1c9d7b45892e9796141b1d379ae
 
 # Install nodejs and friends
-RUN apt-get update && apt-get install -y \
-  curl=7.52.1-5+deb9u16 \
- && curl -sL https://deb.nodesource.com/setup_16.x | bash - \
- && apt-get update && apt-get install -y \
-  nodejs=16.14.0-1nodesource1 \
- && apt-get remove -y curl \
- && apt-get autoremove -y \
- && apt-get clean -y \
- && rm -rf /var/cache/apt /var/lib/apt/lists/* /tmp/* /var/tmp/*
+RUN apk add --no-cache \
+  nodejs=14.19.0-r0
 
 # ENV VARs needed for Node.js
 ENV BLUEBIRD_WARNINGS=0 \
