@@ -6,10 +6,10 @@ RUN apk add --no-cache \
 
 # ENV VARs needed for Node.js
 ENV BLUEBIRD_WARNINGS=0 \
- NODE_ENV=production \
- NODE_NO_WARNINGS=1 \
- NPM_CONFIG_LOGLEVEL=warn \
- SUPPRESS_NO_CONFIG_WARNING=true
+  NODE_ENV=production \
+  NODE_NO_WARNINGS=1 \
+  NPM_CONFIG_LOGLEVEL=warn \
+  SUPPRESS_NO_CONFIG_WARNING=true
 
 WORKDIR /app
 
