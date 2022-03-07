@@ -12,10 +12,3 @@ ENV BLUEBIRD_WARNINGS=0 \
   SUPPRESS_NO_CONFIG_WARNING=true
 
 WORKDIR /app
-
-# Set up labels to make image linking work
-ARG COMMIT_SHA
-ARG DOCKERFILE_PATH=Dockerfile
-
-LABEL org.opencontainers.image.revision=$COMMIT_SHA \
-  org.opencontainers.image.source=$DOCKERFILE_PATH
