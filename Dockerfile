@@ -1,4 +1,4 @@
-FROM alpine:3.14@sha256:eb3e4e175ba6d212ba1d6e04fc0782916c08e1c9d7b45892e9796141b1d379ae
+FROM alpine:3.14@sha256:43eb8f0d8215d8661f745f3d88563c026614d843b668b233bbe1666b6d026f61
 
 # Install nodejs and friends
 RUN apk add --no-cache \
