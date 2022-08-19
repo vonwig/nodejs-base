@@ -15,5 +15,5 @@ WORKDIR /app
 
 # atomist-start: fix for https://dso.atomist.com/AQ1K5FIKA/overview/cve/ATM-2022-0001
 RUN apk add --no-cache \
-  busybox=1.33.1-r7
+  busybox=1.33.1-r8
 # atomist-end
