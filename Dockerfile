@@ -12,3 +12,8 @@ ENV BLUEBIRD_WARNINGS=0 \
   SUPPRESS_NO_CONFIG_WARNING=true
 
 WORKDIR /app
+
+# atomist-start: fix for https://dso.docker.com/AQ1K5FIKA/overview/cve/ATM-2022-0001
+RUN apk add --no-cache \
+  busybox=1.33.1-r8
+# atomist-end
